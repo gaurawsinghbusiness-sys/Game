@@ -1,4 +1,4 @@
-const CACHE_NAME = "shield-painter-v2";
+const CACHE_NAME = "shield-painter-v3";
 const SCOPE_PATH = new URL(self.registration.scope).pathname;
 const BASE_PATH = SCOPE_PATH.endsWith("/") ? SCOPE_PATH : `${SCOPE_PATH}/`;
 const APP_SHELL_PATH = `${BASE_PATH}index.html`;
