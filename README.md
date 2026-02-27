@@ -13,6 +13,13 @@ Shield Painter is a portrait mobile game where the player moves with one thumb a
 
 This game has zero runtime dependencies for local web testing. `npm install` is only needed later when adding Capacitor packages for Play Store packaging.
 
+## Public URL (GitHub Pages)
+
+After enabling Pages in repository settings, the game is published automatically on every push to `main` by the workflow in `.github/workflows/deploy-pages.yml`.
+
+- Expected URL: `https://gaurawsinghbusiness-sys.github.io/Game/`
+- Enable once in GitHub: `Settings -> Pages -> Source: GitHub Actions`
+
 ## Controls
 
 - Left side touch: move player

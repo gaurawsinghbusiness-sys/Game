@@ -1,12 +1,15 @@
-const CACHE_NAME = "shield-painter-v1";
+const CACHE_NAME = "shield-painter-v2";
+const SCOPE_PATH = new URL(self.registration.scope).pathname;
+const BASE_PATH = SCOPE_PATH.endsWith("/") ? SCOPE_PATH : `${SCOPE_PATH}/`;
+const APP_SHELL_PATH = `${BASE_PATH}index.html`;
 const CORE_ASSETS = [
-  "/",
-  "/index.html",
-  "/src/main.js",
-  "/src/styles.css",
-  "/manifest.webmanifest",
-  "/icons/icon-any.svg",
-  "/icons/icon-maskable.svg"
+  BASE_PATH,
+  APP_SHELL_PATH,
+  `${BASE_PATH}src/main.js`,
+  `${BASE_PATH}src/styles.css`,
+  `${BASE_PATH}manifest.webmanifest`,
+  `${BASE_PATH}icons/icon-any.svg`,
+  `${BASE_PATH}icons/icon-maskable.svg`
 ];
 
 self.addEventListener("install", (event) => {
@@ -45,7 +48,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const cached = await caches.match(request);
-          return cached || caches.match("/");
+          return cached || caches.match(APP_SHELL_PATH);
         })
     );
     return;
@@ -69,7 +72,7 @@ self.addEventListener("fetch", (event) => {
           }
           return response;
         })
-        .catch(() => caches.match("/"));
+        .catch(() => caches.match(APP_SHELL_PATH));
     })
   );
 });
