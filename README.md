@@ -1,6 +1,6 @@
 # Shield Painter
 
-Shield Painter is a portrait mobile game where the player moves with one thumb and draws short-lived shield lines with the other to deflect bullet storms.
+Shield Painter is a portrait mobile game where the player moves with one thumb and draws short-lived shield lines with the other to deflect bullets into enemy cores.
 
 ## Run locally
 
@@ -29,9 +29,10 @@ After enabling Pages in repository settings, the game is published automatically
 
 ## Gameplay scoring
 
-- Deflect: score increases by current combo
-- Combo: grows if next deflect happens within 1.2 seconds
-- Close call: +2 when enemy bullets pass very near the player
+- Deflect: +combo score, perfect center deflect gives extra points
+- Core hit: bonus score, core destroy gives large score burst
+- Combo: grows if next deflect happens within 1.25 seconds
+- Close call: +1 when enemy bullets pass very near the player
 - Damage: 3 HP total
 
 ## PWA testing checklist
@@ -62,6 +63,6 @@ Monetization is intentionally deferred, but this project is structured for Play 
 
 ## Next production tasks
 
-- Add turret entities and friendly deflect-hit effects
-- Add progression (waves / daily challenge seed)
+- Add audio and haptic options menu (mute, vibration toggle)
+- Add daily challenge seed and leaderboard endpoint
 - Integrate ads/IAP later through Capacitor plugins when needed
