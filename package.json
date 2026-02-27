@@ -1,0 +1,10 @@
+{
+  "name": "shield-painter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "build": "./scripts/build.sh",
+    "preview": "cd dist && python3 -m http.server 4173"
+  }
+}

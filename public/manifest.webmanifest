@@ -1,0 +1,25 @@
+{
+  "name": "Shield Painter",
+  "short_name": "ShieldPaint",
+  "description": "Deflect bullet storms by drawing a short-lived shield line.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#0f1726",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-any.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
+
